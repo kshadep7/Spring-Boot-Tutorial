@@ -3,6 +3,7 @@ package com.example.springtutorial.demo.dao;
 import com.example.springtutorial.demo.model.Person;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface PersonDao {
@@ -14,5 +15,12 @@ public interface PersonDao {
         return insertPerson(id, person);
     }
 
-    public List<Person> getAllPersons();
+    List<Person> getAllPersons();
+
+    Optional<Person> selectPersonById(UUID id);
+
+    int deletePersonById(UUID id);
+
+    int updatePersonById(UUID id, Person person);
+
 }
