@@ -16,6 +16,9 @@ public class PseudoPersonDataAccessService implements PersonDao {
     @Override
     public int insertPerson(UUID id, Person person) {
         db.add(new Person(id, person.getName()));
+        System.out.println("=================");
+        System.out.println(id);
+        System.out.println(person.getName());
         return 1;
     }
 
